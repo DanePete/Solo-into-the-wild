@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function Map(latLng) {
   return (
-    <MapContainer center={latLng.latLng} zoom={5} scrollWheelZoom={false}>
+    <MapContainer center={latLng.latLng} zoom={16} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -14,9 +14,9 @@ function Map(latLng) {
       <TileLayer
         url={`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=11ec4ec7b29812e54c0f261032fbce7b`}
       />
-      <Marker position={[51.505, -0.09]}>
+      <Marker position={latLng.latLng}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          FOUND YOU! 
         </Popup>
       </Marker>
     </MapContainer>

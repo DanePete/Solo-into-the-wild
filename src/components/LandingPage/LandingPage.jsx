@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
-import Map from '../Map/Map';
 
 // CUSTOM COMPONENTS
 import RegisterForm from '../RegisterForm/RegisterForm';
@@ -18,10 +17,6 @@ function LandingPage() {
     
     <div className="container landing-container">
       <h2>{heading}</h2>
-      <div className="map">
-        <Map />
-      </div>
-      <Map />
       <div className="grid">
         <div className="grid-col grid-col_8">
           <p>

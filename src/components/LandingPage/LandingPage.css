@@ -13,6 +13,11 @@ Grid
   align-items: flex-start;
 }
 
+.map {
+  width: 500px;
+  margin: 0 auto;
+}
+
 .grid-col {
   flex: 0 0 auto;
   padding: 0 0.5rem 0.5rem;

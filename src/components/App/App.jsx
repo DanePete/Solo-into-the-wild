@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   HashRouter as Router,
   Redirect,
@@ -28,9 +28,20 @@ function App() {
 
   const user = useSelector(store => store.user);
 
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
+
   useEffect(() => {
+    fetuserLocation();
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
+
+  const fetuserLocation = () => {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      setLat(position.coords.latitude);
+      setLng(position.coords.longitude);
+    });
+  }
 
   return (
     <Router>
@@ -54,7 +65,9 @@ function App() {
             exact
             path="/map"
           >
-            <Maps />
+            <Maps
+              latLng = {[lat, lng]}
+            />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

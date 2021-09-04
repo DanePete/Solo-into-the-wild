@@ -2,6 +2,21 @@
 Grid
 -------------------------------------------------------------------------------- */
 
+.hero-text {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.login-form {
+  background: white;
+  text-align: center;
+  border-radius: 9px;
+  box-shadow: 1px 1px 15px 2px #e91e63;
+  padding: 15px;
+  width: 60%;
+}
+
 .grid {
   display: flex;
   flex: 0 1 auto;

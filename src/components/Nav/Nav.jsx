@@ -7,10 +7,12 @@ import { useSelector } from 'react-redux';
 function Nav() {
   const user = useSelector((store) => store.user);
 
+  console.log('user id', user.id);
+
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">INTO THE WILD</h2>
+        <h2 className="nav-title"></h2>
       </Link>
       <div>
         {/* If no user is logged in, show these links */}

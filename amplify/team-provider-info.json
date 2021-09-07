@@ -10,6 +10,13 @@
       "StackName": "amplify-intothewild-staging-162656",
       "StackId": "arn:aws:cloudformation:us-east-2:645427258976:stack/amplify-intothewild-staging-162656/6bb01290-0ff8-11ec-918b-063a6725832e",
       "AmplifyAppId": "d3nlo60zthwvy0"
+    },
+    "categories": {
+      "auth": {
+        "intothewild80506a25": {},
+        "intothewildabe640c7": {},
+        "intothewild": {}
+      }
     }
   }
 }

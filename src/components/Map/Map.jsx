@@ -2,8 +2,19 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function Map(latLng) {
+  console.log('latng map', latLng.latLng);
+
+  
+  const addMarker = (e) => {
+    const {markers} = this.state
+    console.log('lat lng drop', e.latLng);
+    markers.push(e.latlng)
+    this.setState({markers})
+  }
+
+
   return (
-    <MapContainer center={latLng.latLng} zoom={16} scrollWheelZoom={false}>
+    <MapContainer onClick={addMarker} center={latLng.latLng} zoom={16} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

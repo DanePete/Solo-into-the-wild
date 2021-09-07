@@ -19,15 +19,13 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import Maps from '../Map/Map';
+import Hike from '../Hike/Hike';
 
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
-
   const user = useSelector(store => store.user);
-
   const [lat, setLat] = useState('');
   const [lng, setLng] = useState('');
 
@@ -36,6 +34,11 @@ function App() {
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
 
+  /**
+   * Fetch User Location
+   * fetches user location via the navigator module
+   * and sets user location to local state
+   */
   const fetuserLocation = () => {
     navigator.geolocation.getCurrentPosition(function(position) {
       setLat(position.coords.latitude);
@@ -63,9 +66,9 @@ function App() {
           <Route
             // shows AboutPage at all times (logged in or not)
             exact
-            path="/map"
+            path="/hike"
           >
-            <Maps
+            <Hike
               latLng = {[lat, lng]}
             />
           </Route>

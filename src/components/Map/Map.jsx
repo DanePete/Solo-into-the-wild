@@ -12,7 +12,11 @@ function Map(latLng) {
     this.setState({markers})
   }
 
-
+  /**
+   * Map Component
+   * Utilizes react-leaflet, Leaflet
+   * Pulls precipitation and cloud data from Open Weather Map API
+   */
   return (
     <MapContainer onClick={addMarker} center={latLng.latLng} zoom={16} scrollWheelZoom={false}>
       <TileLayer

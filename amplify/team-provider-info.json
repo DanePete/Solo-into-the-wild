@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-intothewild-staging-162656-authRole",
+      "UnauthRoleArn": "arn:aws:iam::645427258976:role/amplify-intothewild-staging-162656-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::645427258976:role/amplify-intothewild-staging-162656-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-intothewild-staging-162656-deployment",
+      "UnauthRoleName": "amplify-intothewild-staging-162656-unauthRole",
+      "StackName": "amplify-intothewild-staging-162656",
+      "StackId": "arn:aws:cloudformation:us-east-2:645427258976:stack/amplify-intothewild-staging-162656/6bb01290-0ff8-11ec-918b-063a6725832e",
+      "AmplifyAppId": "d3nlo60zthwvy0"
+    }
+  }
+}
